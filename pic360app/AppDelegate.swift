@@ -7,18 +7,51 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let userDefault = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }
 
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        print(userDefault.bool(forKey: "initial"))
+        if userDefault.bool(forKey: "initial") {
+            print("Initial")
+        } else {
+            print("Not Initial")
+            LibraryAPI.sharedInstance.addLocation("Bathroom")
+            LibraryAPI.sharedInstance.addLocation("Bedroom")
+            LibraryAPI.sharedInstance.addLocation("Den")
+            LibraryAPI.sharedInstance.addLocation("Dining Room")
+            LibraryAPI.sharedInstance.addLocation("Kitchen")
+            LibraryAPI.sharedInstance.addLocation("Living Room")
+            LibraryAPI.sharedInstance.addLocation("Attic")
+            LibraryAPI.sharedInstance.addLocation("Laundry Room")
+            LibraryAPI.sharedInstance.addLocation("Foyer")
+            LibraryAPI.sharedInstance.addLocation("Nook")
+            LibraryAPI.sharedInstance.addLocation("Man Cave")
+            LibraryAPI.sharedInstance.addLocation("Formal Dining Room")
+            LibraryAPI.sharedInstance.addLocation("Woman Cave")
+            LibraryAPI.sharedInstance.addLocation("Pantry")
+            LibraryAPI.sharedInstance.addLocation("Wine Cellar")
+            LibraryAPI.sharedInstance.addLocation("Master Bedroom")
+            LibraryAPI.sharedInstance.addLocation("Staris")
+            LibraryAPI.sharedInstance.addLocation("Basement")
+            
+            // Show page views
+            userDefault.set(true, forKey: "initial")
+        }
+        
+        return true
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -39,6 +72,51 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // Saves changes in the application's managed object context before the application terminates.
+        self.saveContext()
+    }
+    
+    // MARK: - Core Data stack
+    lazy var persistentContainer: NSPersistentContainer = {
+        /*
+         The persistent container for the application. This implementation
+         creates and returns a container, having loaded the store for the
+         application to it. This property is optional since there are legitimate
+         error conditions that could cause the creation of the store to fail.
+         */
+        let container = NSPersistentContainer(name: "pic360app")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
+                /*
+                 Typical reasons for an error here include:
+                 * The parent directory does not exist, cannot be created, or disallows writing.
+                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                 * The device is out of space.
+                 * The store could not be migrated to the current model version.
+                 Check the error message to determine what the actual problem was.
+                 */
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
     }
 
 
