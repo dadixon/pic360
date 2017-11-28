@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddItemViewController: UIViewController {
+class AddItemViewController: BaseViewController {
 
     @IBOutlet weak var inputTableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!

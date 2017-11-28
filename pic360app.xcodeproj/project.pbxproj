@@ -18,11 +18,15 @@
 		A4488D6F1FB94B4A004D92FD /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4488D6E1FB94B4A004D92FD /* PersistencyManager.swift */; };
 		A4488D711FB94EB1004D92FD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4488D701FB94EB1004D92FD /* DashboardViewController.swift */; };
 		A46508771FC4498C00317FD9 /* CustomNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46508761FC4498C00317FD9 /* CustomNavViewController.swift */; };
+		A48EF0161FCD6C2A008BE1C6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF0151FCD6C2A008BE1C6 /* BaseViewController.swift */; };
+		A48EF0181FCD6F03008BE1C6 /* InstructionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF0171FCD6F03008BE1C6 /* InstructionPageViewController.swift */; };
+		A48EF01C1FCD8425008BE1C6 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF01B1FCD8425008BE1C6 /* WalkthroughViewController.swift */; };
+		A48EF01E1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF01D1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift */; };
+		A48EF0201FCD87E1008BE1C6 /* Walkthrough2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF01F1FCD87E1008BE1C6 /* Walkthrough2ViewController.swift */; };
 		A4AC9A2A1FC876B1003D439B /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC9A291FC876B1003D439B /* InputTableViewCell.swift */; };
 		A4AC9A351FC8C763003D439B /* PropertyItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC9A331FC8C763003D439B /* PropertyItem+CoreDataClass.swift */; };
 		A4AC9A361FC8C763003D439B /* PropertyItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC9A341FC8C763003D439B /* PropertyItem+CoreDataProperties.swift */; };
 		A4C5BBDC1FCA7026009D5B71 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5BBDB1FCA7026009D5B71 /* DetailsViewController.swift */; };
-		A4D39F4C1FBF742F00EE666E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D39F4B1FBF742F00EE666E /* Images.xcassets */; };
 		A4D39F501FBF89EE00EE666E /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D39F4F1FBF89EE00EE666E /* LocationCollectionViewCell.swift */; };
 		A4D39F541FBF98D400EE666E /* pic360app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4D39F521FBF98D400EE666E /* pic360app.xcdatamodeld */; };
 		A4E6D0C41FBCDCF20027BD95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E6D0C31FBCDCF20027BD95 /* DetailViewController.swift */; };
@@ -64,11 +68,15 @@
 		A4488D6E1FB94B4A004D92FD /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
 		A4488D701FB94EB1004D92FD /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		A46508761FC4498C00317FD9 /* CustomNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavViewController.swift; sourceTree = "<group>"; };
+		A48EF0151FCD6C2A008BE1C6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		A48EF0171FCD6F03008BE1C6 /* InstructionPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionPageViewController.swift; sourceTree = "<group>"; };
+		A48EF01B1FCD8425008BE1C6 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughViewController.swift; path = ../../../../../.Trash/WalkthroughViewController.swift; sourceTree = "<group>"; };
+		A48EF01D1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough1ViewController.swift; sourceTree = "<group>"; };
+		A48EF01F1FCD87E1008BE1C6 /* Walkthrough2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough2ViewController.swift; sourceTree = "<group>"; };
 		A4AC9A291FC876B1003D439B /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		A4AC9A331FC8C763003D439B /* PropertyItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A4AC9A341FC8C763003D439B /* PropertyItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A4C5BBDB1FCA7026009D5B71 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		A4D39F4B1FBF742F00EE666E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4D39F4F1FBF89EE00EE666E /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4D39F531FBF98D400EE666E /* pic360app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pic360app.xcdatamodel; sourceTree = "<group>"; };
 		A4E6D0C31FBCDCF20027BD95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +141,6 @@
 				A4488D3D1FB94769004D92FD /* Assets.xcassets */,
 				A4488D3F1FB94769004D92FD /* LaunchScreen.storyboard */,
 				A4488D421FB94769004D92FD /* Info.plist */,
-				A4D39F4B1FBF742F00EE666E /* Images.xcassets */,
 			);
 			path = pic360app;
 			sourceTree = "<group>";
@@ -172,6 +179,11 @@
 				A4E6D0C31FBCDCF20027BD95 /* DetailViewController.swift */,
 				A43BC85E1FBAAFB1003F053B /* AddItemViewController.swift */,
 				A4C5BBDB1FCA7026009D5B71 /* DetailsViewController.swift */,
+				A48EF0151FCD6C2A008BE1C6 /* BaseViewController.swift */,
+				A48EF0171FCD6F03008BE1C6 /* InstructionPageViewController.swift */,
+				A48EF01B1FCD8425008BE1C6 /* WalkthroughViewController.swift */,
+				A48EF01D1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift */,
+				A48EF01F1FCD87E1008BE1C6 /* Walkthrough2ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -312,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4488D411FB94769004D92FD /* LaunchScreen.storyboard in Resources */,
-				A4D39F4C1FBF742F00EE666E /* Images.xcassets in Resources */,
 				A4488D3E1FB94769004D92FD /* Assets.xcassets in Resources */,
 				A4488D3C1FB94769004D92FD /* Main.storyboard in Resources */,
 			);
@@ -341,18 +352,23 @@
 			files = (
 				A4AC9A351FC8C763003D439B /* PropertyItem+CoreDataClass.swift in Sources */,
 				A4488D6F1FB94B4A004D92FD /* PersistencyManager.swift in Sources */,
+				A48EF01E1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift in Sources */,
 				A4D39F501FBF89EE00EE666E /* LocationCollectionViewCell.swift in Sources */,
 				A46508771FC4498C00317FD9 /* CustomNavViewController.swift in Sources */,
 				A4488D711FB94EB1004D92FD /* DashboardViewController.swift in Sources */,
+				A48EF0161FCD6C2A008BE1C6 /* BaseViewController.swift in Sources */,
 				A4488D6B1FB948C9004D92FD /* LibraryAPI.swift in Sources */,
 				A4488D371FB94769004D92FD /* AppDelegate.swift in Sources */,
 				A43BC85F1FBAAFB1003F053B /* AddItemViewController.swift in Sources */,
 				A4AC9A2A1FC876B1003D439B /* InputTableViewCell.swift in Sources */,
 				A4D39F541FBF98D400EE666E /* pic360app.xcdatamodeld in Sources */,
 				A4E6D0C41FBCDCF20027BD95 /* DetailViewController.swift in Sources */,
+				A48EF0181FCD6F03008BE1C6 /* InstructionPageViewController.swift in Sources */,
 				A4C5BBDC1FCA7026009D5B71 /* DetailsViewController.swift in Sources */,
 				A4AC9A361FC8C763003D439B /* PropertyItem+CoreDataProperties.swift in Sources */,
+				A48EF01C1FCD8425008BE1C6 /* WalkthroughViewController.swift in Sources */,
 				A4F44D2C1FC8D86400DA6265 /* ItemCollectionViewCell.swift in Sources */,
+				A48EF0201FCD87E1008BE1C6 /* Walkthrough2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +541,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pic360.pic360app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -540,7 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pic360.pic360app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

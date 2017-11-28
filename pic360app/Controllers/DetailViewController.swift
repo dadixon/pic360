@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "ItemsCell"
 
-class DetailViewController: UIViewController {
+class DetailViewController: BaseViewController {
     
     @IBOutlet weak var itemsCollectionView: UICollectionView!
     
@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         
         setupNavBar()
         
-        self.view.backgroundColor = UIColor.black
+        self.view.backgroundColor = UIColor.green
         
         itemsCollectionView.delegate = self
         itemsCollectionView.dataSource = self
@@ -53,8 +53,8 @@ class DetailViewController: UIViewController {
     
     func setupNavBar() {
         navigationItem.title = location
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+//        self.navigationController?.navigationBar.tintColor = UIColor.white
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
     
     func getImage(imageName: String) -> UIImage {

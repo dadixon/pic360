@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: BaseViewController {
 
     @IBOutlet weak var propertyItemTable: UITableView!
     
@@ -24,6 +25,8 @@ class DashboardViewController: UIViewController {
         propertyItemTable.delegate = self
         
         propertyItemTable.tableFooterView = UIView()
+        
+//        displayWalkthrough()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +40,18 @@ class DashboardViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
+    
+    func displayWalkthrough() {
+        let userDefault = UserDefaults.standard
+        let displayWalkthrough = userDefault.bool(forKey: "initial")
+        
+//        if !displayWalkthrough {
+            if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "InstructionViewController") {
+                self.present(pageViewController, animated: true, completion: nil)
+            }
+//        }
+    }
+    
     
     // MARK: Actions
     

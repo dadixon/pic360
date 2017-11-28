@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             LibraryAPI.sharedInstance.addLocation("Basement")
             
             // Show page views
-            userDefault.set(true, forKey: "initial")
+            
         }
         
         return true

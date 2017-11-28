@@ -71,7 +71,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="cuC-YK-0DC">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="organize" id="vhA-Oc-SkG"/>
                         <rightBarButtonItems>
                             <barButtonItem style="plain" systemItem="add" id="pfn-pz-Jap">
                                 <connections>
@@ -218,6 +217,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j5R-QX-Qc9"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="1SI-vO-i9O" id="P9j-sT-imM"/>
+                        <outlet property="imageView" destination="orJ-pa-NaD" id="G0j-MB-V55"/>
+                        <outlet property="nameLabel" destination="h7d-fM-GeV" id="r1T-Tv-VNi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTR-AA-o4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,6 +361,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ouw-os-R22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-202" y="118"/>
+        </scene>
+        <!--Instruction Page View Controller-->
+        <scene sceneID="mT6-aW-msc">
+            <objects>
+                <pageViewController storyboardIdentifier="InstructionViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="CeR-dk-bf2" customClass="InstructionPageViewController" customModule="pic360app" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCG-3J-ZU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="806"/>
+        </scene>
+        <!--Walkthrough1 View Controller-->
+        <scene sceneID="QDF-OT-n8Y">
+            <objects>
+                <viewController storyboardIdentifier="Walkthrough1ViewController" id="CLf-kP-uVg" customClass="Walkthrough1ViewController" customModule="pic360app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RVt-2s-Uyt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TY-Gg-GWV">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="k5d-dz-NbS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VqN-NB-SGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="806"/>
+        </scene>
+        <!--Walkthrough2 View Controller-->
+        <scene sceneID="lnb-Ve-P93">
+            <objects>
+                <viewController storyboardIdentifier="Walkthrough2ViewController" id="nnS-N2-GHu" customClass="Walkthrough2ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUD-iB-OxZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkX-43-5rH">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VEk-Dq-7Xu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXq-XS-iSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="806"/>
+        </scene>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="OyQ-V6-hxc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xP7-CK-Ezt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="WalkthroughViewController" id="GfJ-62-zjE" customClass="WalkthroughViewController" customModule="pic360app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ny-lq-lz9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qwf-Ex-d3V">
+                                <rect key="frame" x="16" y="79" width="343" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hFJ-ot-CmD"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerLabel" destination="Qwf-Ex-d3V" id="uNc-lE-vly"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-246" y="1523"/>
         </scene>
     </scenes>
     <resources>

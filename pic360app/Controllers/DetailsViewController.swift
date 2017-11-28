@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: BaseViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,11 +21,10 @@ class DetailsViewController: UIViewController {
 
         setupNavBar()
         
-//        self.view.backgroundColor = UIColor.black
-        
-        print(propertyItemID)
-        
+        self.view.backgroundColor = UIColor.green
+
         let propertyItem = LibraryAPI.sharedInstance.getPropertyItemById(propertyItemID)
+        
         imageView.image = getImage(imageName: propertyItem.imgName)
         nameLabel.text = propertyItem.name
         descriptionTextView.text = propertyItem.desc
@@ -37,8 +36,8 @@ class DetailsViewController: UIViewController {
     
     func setupNavBar() {
         navigationItem.title = "Details"
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+//        self.navigationController?.navigationBar.tintColor = UIColor.white
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
     }
     
     func getImage(imageName: String) -> UIImage {
