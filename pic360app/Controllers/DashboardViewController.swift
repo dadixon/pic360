@@ -25,7 +25,6 @@ class DashboardViewController: BaseViewController {
         propertyItemTable.delegate = self
         
         propertyItemTable.tableFooterView = UIView()
-        
 //        displayWalkthrough()
     }
 
