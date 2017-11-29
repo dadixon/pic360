@@ -26,7 +26,7 @@ class DashboardViewController: BaseViewController {
         
         propertyItemTable.tableFooterView = UIView()
         
-        displayWalkthrough()
+//        displayWalkthrough()
     }
 
     override func viewWillAppear(_ animated: Bool) {
