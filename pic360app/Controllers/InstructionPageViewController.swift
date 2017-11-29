@@ -31,14 +31,6 @@ class InstructionPageViewController: UIPageViewController {
 }
 
 extension InstructionPageViewController: UIPageViewControllerDataSource {
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 2
-    }
-
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
-    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
@@ -47,7 +39,8 @@ extension InstructionPageViewController: UIPageViewControllerDataSource {
         let previousIndex = viewControllerIndex - 1
         
         guard previousIndex >= 0 else {
-            return orderedViewControllers.last
+//            return orderedViewControllers.last
+            return nil
         }
         
         guard orderedViewControllers.count > previousIndex else {
@@ -65,7 +58,8 @@ extension InstructionPageViewController: UIPageViewControllerDataSource {
         let nextIndex = viewControllerIndex + 1
         
         guard orderedViewControllers.count != nextIndex else {
-            return orderedViewControllers.first
+//            return orderedViewControllers.first
+            return nil
         }
         
         guard orderedViewControllers.count > nextIndex else {
