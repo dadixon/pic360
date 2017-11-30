@@ -11,9 +11,9 @@ import UIKit
 class AddItemViewController: BaseViewController {
 
     @IBOutlet weak var inputTableView: UITableView!
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var dismissBtn: UIButton!
     @IBOutlet weak var saveBtn: UIBarButtonItem!
+    @IBOutlet weak var imageCollectionView: UICollectionView!
     
     var location: String!
     var nameTextField: UITextField!
@@ -24,6 +24,7 @@ class AddItemViewController: BaseViewController {
     let locationPicker = UIPickerView()
     
     var locations = [String]()
+    var images = [Image]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,16 +48,17 @@ class AddItemViewController: BaseViewController {
     }
     
     @IBAction func saveItem(_ sender: Any) {
-        let name: String = nameTextField.text!
-        let filename = "\(name)_\(NSDate().timeIntervalSince1970).jpg"
-        if let data = UIImageJPEGRepresentation(imageView.image!, 1.0) {
-            let filePath = getDocumentsDirectory().appendingPathComponent(filename)
-            try? data.write(to: filePath)
-            
-            LibraryAPI.sharedInstance.addPropertyItem(name: nameTextField.text!, location: locationTextField.text!, imgPath: filename, description: descTextField.text!, serialNumber: "")
+//        let name: String = nameTextField.text!
+//        let filename = "\(name)_\(NSDate().timeIntervalSince1970).jpg"
+//        if let data = UIImageJPEGRepresentation(imageView.image!, 1.0) {
+//            let filePath = getDocumentsDirectory().appendingPathComponent(filename)
+//            try? data.write(to: filePath)
+        
+            let loc = LibraryAPI.sharedInstance.setLocation(name: locationTextField.text!)
+            LibraryAPI.sharedInstance.addPropertyItem(location: loc, images: images)
         
             dismiss(animated: true, completion: nil)
-        }
+//        }
     }
     
     func getDocumentsDirectory() -> URL {
@@ -68,7 +70,16 @@ class AddItemViewController: BaseViewController {
 extension AddItemViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         imagePicker.dismiss(animated: true, completion: nil)
-        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+//        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let name: String = UUID().uuidString
+        let filename = "\(name)_\(NSDate().timeIntervalSince1970).jpg"
+        if let data = UIImageJPEGRepresentation(imageView.image!, 1.0) {
+            let filePath = getDocumentsDirectory().appendingPathComponent(filename)
+            try? data.write(to: filePath)
+            
+            images.append(LibraryAPI.sharedInstance.setImage(name: filename, comment: ""))
+            
+        }
     }
 }
 

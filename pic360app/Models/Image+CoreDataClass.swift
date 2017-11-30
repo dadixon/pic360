@@ -1,5 +1,5 @@
 //
-//  PropertyItem+CoreDataClass.swift
+//  Image+CoreDataClass.swift
 //  pic360app
 //
 //  Created by Domonique Dixon on 11/29/17.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class PropertyItem: NSManagedObject {
+public class Image: NSManagedObject {
 
 }

@@ -44,11 +44,11 @@ class DashboardViewController: BaseViewController {
         let userDefault = UserDefaults.standard
         let displayWalkthrough = userDefault.bool(forKey: "initial")
         
-//        if !displayWalkthrough {
+        if !displayWalkthrough {
             if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "InstructionViewController") {
                 self.present(pageViewController, animated: true, completion: nil)
             }
-//        }
+        }
     }
     
     
@@ -82,7 +82,7 @@ class DashboardViewController: BaseViewController {
         if segue.identifier == "segue" {
             let vc = segue.destination as! DetailViewController
             
-            vc.location = sectionTitle[index]
+            vc.location = sectionTitle[index - 1]
         }
     }
 }
@@ -90,7 +90,12 @@ class DashboardViewController: BaseViewController {
 extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.row
-        performSegue(withIdentifier: "segue", sender: nil)
+        
+        if index == 0 {
+            addLocation(self)
+        } else {
+            performSegue(withIdentifier: "segue", sender: nil)
+        }
     }
 }
 
@@ -100,14 +105,23 @@ extension DashboardViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionTitle.count
+        return sectionTitle.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let indexOffset = indexPath.row - 1
+        
+        if indexPath.row == 0 {
+            let addCell = tableView.dequeueReusableCell(withIdentifier: "AddNew", for: indexPath) as! AddNewTableViewCell
+            addCell.addLabel.text = "Add a Room"
+            
+            return addCell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel!.text = sectionTitle[indexPath.row]
-        cell.detailTextLabel?.text = "\(LibraryAPI.sharedInstance.getLocationAmount(sectionTitle[indexPath.row])) images"
+        cell.textLabel!.text = sectionTitle[indexOffset]
+        cell.detailTextLabel?.text = "\(LibraryAPI.sharedInstance.getLocationAmount(sectionTitle[indexOffset])) images"
         cell.accessoryType = .disclosureIndicator
         
         return cell

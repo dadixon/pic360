@@ -25,9 +25,9 @@ class DetailsViewController: BaseViewController {
 
         let propertyItem = LibraryAPI.sharedInstance.getPropertyItemById(propertyItemID)
         
-        imageView.image = getImage(imageName: propertyItem.imgName)
-        nameLabel.text = propertyItem.name
-        descriptionTextView.text = propertyItem.desc
+//        imageView.image = getImage(imageName: propertyItem.imgName)
+//        nameLabel.text = propertyItem.name
+//        descriptionTextView.text = propertyItem.desc
     }
     
     override func viewWillAppear(_ animated: Bool) {

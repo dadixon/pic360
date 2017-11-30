@@ -23,9 +23,14 @@
 		A48EF01C1FCD8425008BE1C6 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF01B1FCD8425008BE1C6 /* WalkthroughViewController.swift */; };
 		A48EF01E1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF01D1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift */; };
 		A48EF0201FCD87E1008BE1C6 /* Walkthrough2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF01F1FCD87E1008BE1C6 /* Walkthrough2ViewController.swift */; };
+		A48EF0221FCF4B11008BE1C6 /* AddNewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF0211FCF4B11008BE1C6 /* AddNewTableViewCell.swift */; };
+		A48EF0411FCF67C0008BE1C6 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF03B1FCF67C0008BE1C6 /* Image+CoreDataClass.swift */; };
+		A48EF0421FCF67C0008BE1C6 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF03C1FCF67C0008BE1C6 /* Image+CoreDataProperties.swift */; };
+		A48EF0431FCF67C0008BE1C6 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF03D1FCF67C0008BE1C6 /* Location+CoreDataClass.swift */; };
+		A48EF0441FCF67C0008BE1C6 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF03E1FCF67C0008BE1C6 /* Location+CoreDataProperties.swift */; };
+		A48EF0451FCF67C0008BE1C6 /* PropertyItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF03F1FCF67C0008BE1C6 /* PropertyItem+CoreDataClass.swift */; };
+		A48EF0461FCF67C0008BE1C6 /* PropertyItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48EF0401FCF67C0008BE1C6 /* PropertyItem+CoreDataProperties.swift */; };
 		A4AC9A2A1FC876B1003D439B /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC9A291FC876B1003D439B /* InputTableViewCell.swift */; };
-		A4AC9A351FC8C763003D439B /* PropertyItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC9A331FC8C763003D439B /* PropertyItem+CoreDataClass.swift */; };
-		A4AC9A361FC8C763003D439B /* PropertyItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AC9A341FC8C763003D439B /* PropertyItem+CoreDataProperties.swift */; };
 		A4C5BBDC1FCA7026009D5B71 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5BBDB1FCA7026009D5B71 /* DetailsViewController.swift */; };
 		A4D39F501FBF89EE00EE666E /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D39F4F1FBF89EE00EE666E /* LocationCollectionViewCell.swift */; };
 		A4D39F541FBF98D400EE666E /* pic360app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4D39F521FBF98D400EE666E /* pic360app.xcdatamodeld */; };
@@ -73,9 +78,14 @@
 		A48EF01B1FCD8425008BE1C6 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughViewController.swift; path = ../../../../../.Trash/WalkthroughViewController.swift; sourceTree = "<group>"; };
 		A48EF01D1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough1ViewController.swift; sourceTree = "<group>"; };
 		A48EF01F1FCD87E1008BE1C6 /* Walkthrough2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrough2ViewController.swift; sourceTree = "<group>"; };
+		A48EF0211FCF4B11008BE1C6 /* AddNewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTableViewCell.swift; sourceTree = "<group>"; };
+		A48EF03B1FCF67C0008BE1C6 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A48EF03C1FCF67C0008BE1C6 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A48EF03D1FCF67C0008BE1C6 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A48EF03E1FCF67C0008BE1C6 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A48EF03F1FCF67C0008BE1C6 /* PropertyItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A48EF0401FCF67C0008BE1C6 /* PropertyItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A4AC9A291FC876B1003D439B /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
-		A4AC9A331FC8C763003D439B /* PropertyItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A4AC9A341FC8C763003D439B /* PropertyItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertyItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A4C5BBDB1FCA7026009D5B71 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A4D39F4F1FBF89EE00EE666E /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
 		A4D39F531FBF98D400EE666E /* pic360app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = pic360app.xcdatamodel; sourceTree = "<group>"; };
@@ -166,8 +176,12 @@
 		A4488D641FB9479E004D92FD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A4AC9A331FC8C763003D439B /* PropertyItem+CoreDataClass.swift */,
-				A4AC9A341FC8C763003D439B /* PropertyItem+CoreDataProperties.swift */,
+				A48EF03B1FCF67C0008BE1C6 /* Image+CoreDataClass.swift */,
+				A48EF03C1FCF67C0008BE1C6 /* Image+CoreDataProperties.swift */,
+				A48EF03D1FCF67C0008BE1C6 /* Location+CoreDataClass.swift */,
+				A48EF03E1FCF67C0008BE1C6 /* Location+CoreDataProperties.swift */,
+				A48EF03F1FCF67C0008BE1C6 /* PropertyItem+CoreDataClass.swift */,
+				A48EF0401FCF67C0008BE1C6 /* PropertyItem+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +209,7 @@
 				A46508761FC4498C00317FD9 /* CustomNavViewController.swift */,
 				A4AC9A291FC876B1003D439B /* InputTableViewCell.swift */,
 				A4F44D2B1FC8D86400DA6265 /* ItemCollectionViewCell.swift */,
+				A48EF0211FCF4B11008BE1C6 /* AddNewTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -350,8 +365,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AC9A351FC8C763003D439B /* PropertyItem+CoreDataClass.swift in Sources */,
+				A48EF0431FCF67C0008BE1C6 /* Location+CoreDataClass.swift in Sources */,
 				A4488D6F1FB94B4A004D92FD /* PersistencyManager.swift in Sources */,
+				A48EF0441FCF67C0008BE1C6 /* Location+CoreDataProperties.swift in Sources */,
 				A48EF01E1FCD87D4008BE1C6 /* Walkthrough1ViewController.swift in Sources */,
 				A4D39F501FBF89EE00EE666E /* LocationCollectionViewCell.swift in Sources */,
 				A46508771FC4498C00317FD9 /* CustomNavViewController.swift in Sources */,
@@ -361,14 +377,18 @@
 				A4488D371FB94769004D92FD /* AppDelegate.swift in Sources */,
 				A43BC85F1FBAAFB1003F053B /* AddItemViewController.swift in Sources */,
 				A4AC9A2A1FC876B1003D439B /* InputTableViewCell.swift in Sources */,
+				A48EF0451FCF67C0008BE1C6 /* PropertyItem+CoreDataClass.swift in Sources */,
 				A4D39F541FBF98D400EE666E /* pic360app.xcdatamodeld in Sources */,
+				A48EF0421FCF67C0008BE1C6 /* Image+CoreDataProperties.swift in Sources */,
 				A4E6D0C41FBCDCF20027BD95 /* DetailViewController.swift in Sources */,
 				A48EF0181FCD6F03008BE1C6 /* InstructionPageViewController.swift in Sources */,
+				A48EF0221FCF4B11008BE1C6 /* AddNewTableViewCell.swift in Sources */,
 				A4C5BBDC1FCA7026009D5B71 /* DetailsViewController.swift in Sources */,
-				A4AC9A361FC8C763003D439B /* PropertyItem+CoreDataProperties.swift in Sources */,
 				A48EF01C1FCD8425008BE1C6 /* WalkthroughViewController.swift in Sources */,
+				A48EF0411FCF67C0008BE1C6 /* Image+CoreDataClass.swift in Sources */,
 				A4F44D2C1FC8D86400DA6265 /* ItemCollectionViewCell.swift in Sources */,
 				A48EF0201FCD87E1008BE1C6 /* Walkthrough2ViewController.swift in Sources */,
+				A48EF0461FCF67C0008BE1C6 /* PropertyItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

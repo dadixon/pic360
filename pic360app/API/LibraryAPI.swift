@@ -24,12 +24,16 @@ final class LibraryAPI {
         return persistencyManager.getPropertyItems(location: location)
     }
     
-    func addPropertyItem(name: String, location: String, imgPath: String, description: String, serialNumber: String) {
-        persistencyManager.addPropertyItem(name: name, location: location, imgPath: imgPath, description: description, serialNumber: serialNumber)
+    func addPropertyItem(location: Location, images: [Image]) {
+        persistencyManager.addPropertyItem(location: location, images: images)
     }
     
     func getLocations() -> [String] {
         return persistencyManager.getLocations()
+    }
+    
+    func setLocation(name: String) -> Location {
+        return persistencyManager.setLocation(name: name)
     }
     
     func addLocation(_ name: String) {
@@ -42,5 +46,9 @@ final class LibraryAPI {
     
     func getLocationAmount(_ location: String) -> Int {
         return persistencyManager.getLocationAmount(location: location)
+    }
+    
+    func setImage(name: String, comment: String) -> Image {
+        return persistencyManager.setImage(name: name, comment: comment)
     }
 }

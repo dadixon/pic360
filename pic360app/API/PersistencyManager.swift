@@ -18,6 +18,22 @@ final class PersistencyManager {
         
     }
     
+    func setImage(name: String, comment: String) -> Image {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return Image()
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let imageEntity = NSEntityDescription.entity(forEntityName: "Image", in: managedContext)!
+        
+        let image = Image(entity: imageEntity, insertInto: managedContext)
+        
+        image.name = name
+        image.comment = comment
+        
+        return image
+    }
+    
     func getPropertyItemById(id: String) -> PropertyItem {
         var rv: PropertyItem! = nil
         
@@ -58,21 +74,18 @@ final class PersistencyManager {
         return rv
     }
     
-    func addPropertyItem(name: String, location: String, imgPath: String, description: String, serialNumber: String) {
+    func addPropertyItem(location: Location, images: [Image]) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "PropertyItem", in: managedContext)!
-        let item = NSManagedObject(entity: entity, insertInto: managedContext)
+        let propertyItemEntity = NSEntityDescription.entity(forEntityName: "PropertyItem", in: managedContext)!
+        let item = NSManagedObject(entity: propertyItemEntity, insertInto: managedContext) as! PropertyItem
         
-        item.setValue(UUID().uuidString, forKey: "id")
-        item.setValue(name, forKeyPath: "name")
-        item.setValue(description, forKeyPath: "desc")
-        item.setValue(imgPath, forKeyPath: "imgName")
-        item.setValue(location, forKeyPath: "location")
-        item.setValue(serialNumber, forKeyPath: "serialNumber")
+        item.id = UUID().uuidString
+        item.addToImage(NSSet(array: images))
+        item.loc = location
         
         do {
             try managedContext.save()
@@ -102,6 +115,21 @@ final class PersistencyManager {
         }
         
         return rv
+    }
+    
+    func setLocation(name: String) -> Location {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return Location()
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let imageEntity = NSEntityDescription.entity(forEntityName: "Location", in: managedContext)!
+        
+        let location = Location(entity: imageEntity, insertInto: managedContext)
+        
+        location.name = name
+        
+        return location
     }
     
     func saveLocation(name: String) {

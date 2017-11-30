@@ -83,7 +83,7 @@ extension DetailViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
 
         cell.backgroundColor = UIColor.green
-        cell.imageView.image = getImage(imageName: items[indexPath.row].imgName)
+//        cell.imageView.image = getImage(imageName: items[indexPath.row].imgName)
 
         return cell
     }

@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
-        <attribute name="name" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="PropertyItem" representedClassName="PropertyItem" syncable="YES">
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" attributeType="String" syncable="YES"/>
-        <attribute name="imgName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+    <entity name="Image" representedClassName=".Image" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="serialNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pi" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropertyItem" inverseName="image" inverseEntity="PropertyItem" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="pi" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropertyItem" inverseName="loc" inverseEntity="PropertyItem" syncable="YES"/>
+    </entity>
+    <entity name="PropertyItem" representedClassName=".PropertyItem" syncable="YES">
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <relationship name="image" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Image" inverseName="pi" inverseEntity="Image" syncable="YES"/>
+        <relationship name="loc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="pi" inverseEntity="Location" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Location" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="PropertyItem" positionX="-63" positionY="-9" width="128" height="135"/>
+        <element name="Location" positionX="-74" positionY="-297" width="128" height="73"/>
+        <element name="PropertyItem" positionX="-432" positionY="-270" width="128" height="88"/>
+        <element name="Image" positionX="-36" positionY="-106" width="128" height="88"/>
     </elements>
 </model>
